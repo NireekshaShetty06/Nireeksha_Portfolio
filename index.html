@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nireeksha Shetty | Portfolio</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- 1. NAVIGATION BAR                             -->
+    <!-- ============================================ -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Brand / Logo -->
+            <a href="#home" class="nav-logo">Nireeksha<span>.</span></a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#internship" class="nav-link">Internship</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- ============================================ -->
+        <!-- 2. HOME / HERO SECTION                       -->
+        <!-- ============================================ -->
+        <section id="home" class="section hero-section">
+            <div class="container hero-container">
+                <p class="hero-greeting">Welcome to my portfolio</p>
+                <h1 class="hero-name">Hi, I'm Nireeksha</h1>
+                <h2 class="hero-subtitle">Computer & Communication Engineering Student</h2>
+                <p class="hero-description">
+                    I am a third-year engineering student at NMAM Institute of Technology, 
+                    interested in programming, software development, and continuously learning new technologies.
+                </p>
+                <!-- Call-to-action buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 3. ABOUT SECTION                             -->
+        <!-- ============================================ -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-card">
+                    <p>
+                        Hello! My name is <strong>Nireeksha Shetty</strong>. I am currently in my third year pursuing 
+                        <strong>Computer and Communication Engineering</strong> at <strong>NMAM Institute of Technology</strong>.
+                    </p>
+                    <p>
+                        I have a strong interest in programming and software development. As an engineering student, 
+                        I enjoy understanding how code translates into practical solutions and I am dedicated to continuously 
+                        learning new technologies and tools to enhance my skills.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 4. EDUCATION SECTION                         -->
+        <!-- ============================================ -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey and qualifications</p>
+                
+                <div class="education-grid">
+                    <!-- College / Degree (Current) -->
+                    <div class="education-card highlight">
+                        <div class="education-badge">Currently Pursuing</div>
+                        <h3 class="education-degree">B.E. in Computer and Communication Engineering</h3>
+                        <p class="education-institution">NMAM Institute of Technology</p>
+                        <p class="education-year">Third Year</p>
+                        <div class="education-score">
+                            <span class="score-label">Current CGPA:</span>
+                            <span class="score-value">8.45</span>
+                        </div>
+                    </div>
+
+                    <!-- 12th / PUC -->
+                    <div class="education-card">
+                        <div class="education-badge">Pre-University Course</div>
+                        <h3 class="education-degree">12th / PUC</h3>
+                        <p class="education-institution">[College / Institution Placeholder]</p>
+                        <p class="education-year">Completed</p>
+                        <div class="education-score">
+                            <span class="score-label">Percentage:</span>
+                            <span class="score-value">85.5%</span>
+                        </div>
+                    </div>
+
+                    <!-- 10th Standard -->
+                    <div class="education-card">
+                        <div class="education-badge">Secondary School</div>
+                        <h3 class="education-degree">10th Standard</h3>
+                        <p class="education-institution">[School Name Placeholder]</p>
+                        <p class="education-year">Completed</p>
+                        <div class="education-score">
+                            <span class="score-label">Percentage:</span>
+                            <span class="score-value">88.8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 5. SKILLS SECTION                            -->
+        <!-- ============================================ -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">Programming languages I am currently learning and practicing</p>
+                
+                <div class="skills-grid">
+                    <!-- Python -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">🐍</div>
+                            <span class="skill-level-badge level-basic">Basic</span>
+                        </div>
+                        <h3 class="skill-name">Python</h3>
+                        <p class="skill-desc">
+                            Currently at a basic learning level. Learning core syntax, standard logic, and fundamental problem-solving.
+                        </p>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">☕</div>
+                            <span class="skill-level-badge level-basic">Basic</span>
+                        </div>
+                        <h3 class="skill-name">Java</h3>
+                        <p class="skill-desc">
+                            Currently at a basic learning level. Building an understanding of object-oriented concepts and syntax fundamentals.
+                        </p>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">⚙️</div>
+                            <span class="skill-level-badge level-project">Basic / Project Experience</span>
+                        </div>
+                        <h3 class="skill-name">C++</h3>
+                        <p class="skill-desc">
+                            Basic programming knowledge with hands-on application through an academic mini project during the second year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 6. PROJECTS SECTION                          -->
+        <!-- ============================================ -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Academic projects completed during my engineering coursework</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-tag">First Year Project</span>
+                        </div>
+                        <h3 class="project-title">First Year Social-Related Project</h3>
+                        <p class="project-description">
+                            A social-related academic project completed during the first year. More details will be added later.
+                        </p>
+                        <div class="project-tech">
+                            <span>Academic Project</span>
+                            <span>Social Focus</span>
+                            <span>[Tech details to be added]</span>
+                        </div>
+                        <div class="project-status-box">
+                            <span class="status-icon">📝</span>
+                            <span class="status-text">Project details, documentation, and links will be updated later.</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-tag">Second Year Project</span>
+                        </div>
+                        <h3 class="project-title">Second Year C++ Mini Project</h3>
+                        <p class="project-description">
+                            A C++-based academic mini project completed during the second year. More details will be added later.
+                        </p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Academic Mini Project</span>
+                            <span>[Tech details to be added]</span>
+                        </div>
+                        <div class="project-status-box">
+                            <span class="status-icon">📝</span>
+                            <span class="status-text">Project details, documentation, and links will be updated later.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 7. INTERNSHIP SECTION                        -->
+        <!-- ============================================ -->
+        <section id="internship" class="section internship-section">
+            <div class="container">
+                <h2 class="section-title">Internship</h2>
+                <p class="section-subtitle">Practical industry and academic training</p>
+                
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <div>
+                            <h3 class="internship-role">Internship</h3>
+                            <h4 class="internship-company">Manipal Institute of Technology</h4>
+                        </div>
+                        <span class="internship-badge">[Duration / Timeline Placeholder]</span>
+                    </div>
+                    <p class="internship-description">
+                        Internship details will be updated soon.
+                    </p>
+                    <div class="placeholder-box">
+                        <span>ℹ️ Specific responsibilities, project work, and learnings will be added here once updated.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 8. CONTACT SECTION                           -->
+        <!-- ============================================ -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Feel free to reach out for learning opportunities or academic connections</p>
+                
+                <div class="contact-card">
+                    <p class="contact-text">
+                        I am currently open to student opportunities, academic projects, and technology discussions.
+                    </p>
+
+                    <!-- Email Contact Item -->
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <!-- Replace placeholder email when ready -->
+                        <a href="mailto:[your.email@example.com]" class="contact-link">
+                            [your.email@example.com]
+                        </a>
+                    </div>
+
+                    <!-- Social / Professional Links (Placeholders) -->
+                    <div class="contact-links">
+                        <!-- Replace with your actual GitHub profile link when available -->
+                        <a href="https://github.com/[your-username]" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            GitHub Placeholder
+                        </a>
+                        <!-- Replace with your actual LinkedIn profile link when available -->
+                        <a href="https://linkedin.com/in/[your-username]" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            LinkedIn Placeholder
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nireeksha Shetty. Built with HTML5, CSS3, and Vanilla JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
