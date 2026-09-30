@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DCIS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>DCIS</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active" onclick="showSection('overview')">Overview</a></li>
+                    <li><a href="#" onclick="showSection('add-criminal')">Add Criminal</a></li>
+                    <li><a href="#" onclick="showSection('search-criminal')">Search Record</a></li>
+                    <li><a href="#" onclick="showSection('all-records')">All Records</a></li>
+                    <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Dashboard</h1>
+                <div class="user-info">Logged in as Admin</div>
+            </header>
+
+            <div class="content-area">
+                <!-- Overview Section -->
+                <section id="overview" class="section-active">
+                    <div class="cards-container">
+                        <div class="card">
+                            <h3>Total Records</h3>
+                            <p id="totalRecordsCount">0</p>
+                        </div>
+                        <div class="card">
+                            <h3>Open Cases</h3>
+                            <p id="openCasesCount">0</p>
+                        </div>
+                        <div class="card">
+                            <h3>System Status</h3>
+                            <p class="status-online">Online</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add Criminal Section -->
+                <section id="add-criminal" class="section-hidden">
+                    <h2>Add New Criminal Record</h2>
+                    <div class="form-container">
+                        <form id="addForm">
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label>Criminal ID</label>
+                                    <input type="text" id="addId" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Full Name</label>
+                                    <input type="text" id="addName" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Age</label>
+                                    <input type="number" id="addAge" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Crime Type</label>
+                                    <input type="text" id="addCrime" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Status</label>
+                                    <select id="addStatus" required>
+                                        <option value="Open">Open</option>
+                                        <option value="Under Investigation">Under Investigation</option>
+                                        <option value="Closed">Closed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Record</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Search Section -->
+                <section id="search-criminal" class="section-hidden">
+                    <h2>Search Criminal Record</h2>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Enter ID or Name...">
+                        <button onclick="searchRecord()" class="btn-primary">Search</button>
+                    </div>
+                    <div class="table-container mt-4">
+                        <table id="searchTable" style="display: none;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Crime</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="searchResultBody"></tbody>
+                        </table>
+                        <p id="searchMessage"></p>
+                    </div>
+                </section>
+
+                <!-- All Records Section -->
+                <section id="all-records" class="section-hidden">
+                    <h2>All Criminal Records</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Crime</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recordsTableBody">
+                                <!-- Records will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Check login status on dashboard load
+        if(localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '/';
+        }
+        // Load data initially
+        loadAllRecords();
+    </script>
+</body>
+</html>

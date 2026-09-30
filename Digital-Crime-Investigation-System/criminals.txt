@@ -1,0 +1,8 @@
+120,aj,50,murder,under investigation
+2,mj,20,kidnap,Open
+3,bhuvi,22,theft,Under Investigation
+5,df,45,theft,Closed
+6,manoj,21,murder,Under Investigation
+7,kaushiki,20,drug case,Under Investigation
+420,aishu,19,murder,Under Investigation
+899,aa,20,murder,Open
