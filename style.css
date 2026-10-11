@@ -522,6 +522,44 @@ ul {
     font-size: 1rem;
 }
 
+.project-features {
+    margin-top: 0.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-features-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.project-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.project-features-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.project-features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0.15rem;
+    color: var(--accent);
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
 /* --------------------------------------------------------------------------
    9. INTERNSHIP SECTION
    -------------------------------------------------------------------------- */
